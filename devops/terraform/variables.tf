@@ -40,3 +40,20 @@ variable "django_secret_key" {
   type        = string
   sensitive   = true
 }
+
+variable "ghcr_username" {
+  description = "GitHub username used to pull the image from GHCR"
+  type        = string
+}
+
+variable "ghcr_token" {
+  description = "GitHub Personal Access Token with read:packages scope for pulling from GHCR"
+  type        = string
+  sensitive   = true
+}
+
+variable "django_image" {
+  description = "Full GHCR image reference to deploy, e.g. ghcr.io/your-username/deepdive_course:latest"
+  type        = string
+  default     = ""
+}

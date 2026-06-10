@@ -22,10 +22,6 @@ data "aws_ami" "al2023" {
   }
 }
 
-locals {
-  clone_url = var.git_token != "" ? replace(var.app_git_url, "https://", "https://${var.git_token}@") : var.app_git_url
-}
-
 resource "aws_security_group" "web" {
   name        = "${var.project_name}-sg"
   description = "Allow HTTP and SSH"
@@ -67,10 +63,11 @@ resource "aws_instance" "app" {
   vpc_security_group_ids = [aws_security_group.web.id]
 
   user_data = templatefile("${path.module}/user_data.sh", {
-    clone_url         = local.clone_url
     public_ip         = aws_eip.app.public_ip
     django_secret_key = var.django_secret_key
-    db_password       = var.db_password
+    django_image      = var.django_image
+    ghcr_username     = var.ghcr_username
+    ghcr_token        = var.ghcr_token
   })
 
   tags = {
