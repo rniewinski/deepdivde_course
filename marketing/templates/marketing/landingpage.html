@@ -1,0 +1,384 @@
+{% load i18n static crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.className += ' js-reveal';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% trans "Postgres for Python Developers" %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'marketing/css/landingpage.css' %}" />
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" />
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#11151d">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#11151d"/>
+    <rect x="430" y="250" width="340" height="300" rx="36" fill="#2a3340"/>
+    <text x="600" y="470" font-family="monospace" font-size="150" font-weight="700" fill="#4d9fff" text-anchor="middle">\dt</text>
+  </svg>
+</template>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo"><span class="mark"></span> {% trans "Deep Dive PostgreSQL Course" %} </a>
+    <nav class="nav-links">
+      <a href="#who">{% trans "Who it's for" %}</a>
+      <a href="#curriculum">{% trans "Curriculum" %}</a>
+      <a href="#demo">{% trans "Preview" %}</a>
+      <a href="#faq">{% trans "FAQ" %}</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#waitlist" class="btn btn-primary">{% trans "Join waitlist" %} <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal">postgres-dla-programistów · v1.0</span>
+      <h1 class="reveal">{% blocktrans %}You know Python.<br />Time you actually<br />knew your <span class="hl">database</span>.{% endblocktrans %}</h1>
+      <p class="lede reveal">{% trans "A hands-on PostgreSQL course for developers who've been getting by on the ORM. Indexes, query plans, JSONB, transactions and real performance work — explained the way an engineer actually needs them." %}</p>
+      <div class="hero-cta reveal">
+        <a href="#waitlist" class="btn btn-primary">{% trans "Join the waitlist" %} <span class="arrow">→</span></a>
+        <a href="#curriculum" class="btn btn-ghost">{% trans "View curriculum" %}</a>
+      </div>
+      <div class="hero-meta reveal">
+        <div class="item"><span class="n">8</span><span class="l">{% trans "modules" %}</span></div>
+        <div class="item"><span class="n">47</span><span class="l">{% trans "lessons" %}</span></div>
+        <div class="item"><span class="n">6.5h</span><span class="l">{% trans "of video" %}</span></div>
+        <div class="item"><span class="n">∞</span><span class="l">{% trans "cloud DB access" %}</span></div>
+      </div>
+    </div>
+
+    <div class="term reveal" aria-hidden="true">
+      <div class="term-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="title">psql — production@db · 14.2.0.31:5432</span>
+      </div>
+      <div class="term-body">
+        <span class="ln"><span class="com">-- the query your ORM generated. it's slow.</span></span>
+        <span class="ln"><span class="prompt">db=#</span> <span class="kw">EXPLAIN ANALYZE</span> <span class="kw">SELECT</span> * <span class="kw">FROM</span> orders</span>
+        <span class="ln">      <span class="kw">WHERE</span> status = <span class="str">'shipped'</span> <span class="kw">AND</span> total &gt; <span class="num">500</span></span>
+        <span class="ln">      <span class="kw">ORDER BY</span> created_at <span class="kw">DESC</span> <span class="kw">LIMIT</span> <span class="num">20</span>;</span>
+        <div class="term-result">
+          <div class="rrow"><span>Seq Scan on orders</span><span>rows=940,512</span></div>
+          <div class="rrow"><span>Planning Time</span><span>0.21 ms</span></div>
+          <div class="rrow"><span>Execution Time</span><span style="color:oklch(0.72 0.16 30)">1184.6 ms</span></div>
+          <div class="rrow" style="margin-top:10px"><span class="com">-- by module 3, you'll fix this in one line</span><span class="ok">▸ 4 ms</span></div>
+        </div>
+        <span class="ln" style="margin-top:14px"><span class="prompt">db=#</span> <span class="cursor"></span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span class="lbl">{% trans "Expert knowledge and technologies used in this course:" %}</span>
+    <div class="tools">
+      <span class="tool"><b>psycopg</b> 3</span>
+      <span class="tool"><b>SQLAlchemy</b> 2.0</span>
+      <span class="tool"><b>Django</b> ORM</span>
+      <span class="tool"><b>Alembic</b></span>
+      <span class="tool"><b>PostgreSQL</b> 16</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<section class="section" id="who">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% trans "who it's for" %}</span>
+      <h2>{% trans "Built for the dev the ORM has been carrying." %}</h2>
+      <p>{% trans "If you ship features fine but the database feels like a black box, this is for you. Sound familiar?" %}</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain reveal">
+        <h3>{% blocktrans %}You reach for <span class="mono">.filter()</span> and freeze at a raw JOIN{% endblocktrans %}</h3>
+        <p>{% trans "The ORM is comfortable. The moment you drop to SQL — or someone asks for a query it can't express — you're guessing." %}</p>
+      </div>
+      <div class="pain reveal">
+        <h3>{% blocktrans %}<span class="mono">EXPLAIN ANALYZE</span> looks like hieroglyphics{% endblocktrans %}</h3>
+        <p>{% trans "You've heard it's how you find slow queries. You've also never been able to read the output past line one." %}</p>
+      </div>
+      <div class="pain reveal">
+        <h3>{% trans "Everything works — until there's a million rows" %}</h3>
+        <p>{% trans "Local is instant. Production crawls. You add a random index, pray, and don't really know if it helped." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="section" id="curriculum" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% trans "the curriculum" %}</span>
+      <h2>{% trans "Eight modules — from core basics to an architecture-aware developer." %}</h2>
+      <p>{% trans "Each module wraps up with a comprehensive knowledge test. It’s your chance to check your readiness, eliminate bad habits, and see in black and white exactly which topics you’ve already mastered to perfection." %}</p>
+    </div>
+    <div class="modules">
+      <div class="module reveal">
+        <div class="idx">01</div>
+        <div class="body">
+          <h3>{% trans "Relational foundations the ORM hides from you" %}</h3>
+          <p>{% trans "What a table, row, and type actually are on disk. Primary keys, constraints, and why the database — not your Python — should guard data integrity." %}</p>
+          <div class="topics"><span class="chip">schemas</span><span class="chip">constraints</span><span class="chip">data types</span><span class="chip">normalization</span></div>
+        </div>
+        <div class="dur">{% trans "5 lessons · 38m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">02</div>
+        <div class="body">
+          <h3>{% trans "Indexes: B-tree, GIN, BRIN — and when each wins" %}</h3>
+          <p>{% trans "The single biggest lever on query speed. Build the right index for the access pattern, and learn why half of yours are never used." %}</p>
+          <div class="topics"><span class="chip">b-tree</span><span class="chip">partial indexes</span><span class="chip">covering</span><span class="chip">GIN / GiST</span></div>
+        </div>
+        <div class="dur">{% trans "7 lessons · 1h 04m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">03</div>
+        <div class="body">
+          <h3>{% trans "Reading the query planner" %}</h3>
+          <p>{% blocktrans %}Finally make <span class="mono">EXPLAIN ANALYZE</span> readable. Seq scans vs index scans, estimated vs actual rows, and how to spot the line that's costing you a second.{% endblocktrans %}</p>
+          <div class="topics"><span class="chip">EXPLAIN</span><span class="chip">cost model</span><span class="chip">statistics</span><span class="chip">join strategies</span></div>
+        </div>
+        <div class="dur">{% trans "6 lessons · 52m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">04</div>
+        <div class="body">
+          <h3>{% trans "Joins, CTEs &amp; window functions" %}</h3>
+          <p>{% trans "The SQL the ORM can't write for you. Running totals, rankings, deduplication and reporting queries you'll actually reuse at work." %}</p>
+          <div class="topics"><span class="chip">LATERAL</span><span class="chip">CTEs</span><span class="chip">window fns</span><span class="chip">aggregates</span></div>
+        </div>
+        <div class="dur">{% trans "8 lessons · 1h 11m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">05</div>
+        <div class="body">
+          <h3>{% trans "JSONB &amp; semi-structured data" %}</h3>
+          <p>{% trans "When to reach for JSONB and when it'll wreck you. Querying, indexing and updating JSON without turning Postgres into a slow document store." %}</p>
+          <div class="topics"><span class="chip">jsonb ops</span><span class="chip">GIN on jsonb</span><span class="chip">generated cols</span></div>
+        </div>
+        <div class="dur">{% trans "5 lessons · 41m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">06</div>
+        <div class="body">
+          <h3>{% trans "Transactions, isolation &amp; locking" %}</h3>
+          <p>{% blocktrans %}The bugs that only show up under concurrency. Isolation levels, lost updates, deadlocks, and <span class="mono">SELECT ... FOR UPDATE</span> done correctly.{% endblocktrans %}</p>
+          <div class="topics"><span class="chip">MVCC</span><span class="chip">isolation</span><span class="chip">row locks</span><span class="chip">deadlocks</span></div>
+        </div>
+        <div class="dur">{% trans "6 lessons · 49m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">07</div>
+        <div class="body">
+          <h3>{% trans "Performance tuning &amp; connection pooling" %}</h3>
+          <p>{% blocktrans %}From a slow endpoint to a fix. Caching, <span class="mono">VACUUM</span>, bloat, pooling with PgBouncer, and the settings that actually matter.{% endblocktrans %}</p>
+          <div class="topics"><span class="chip">VACUUM</span><span class="chip">PgBouncer</span><span class="chip">pg_stat</span><span class="chip">N+1</span></div>
+        </div>
+        <div class="dur">{% trans "6 lessons · 58m" %}</div>
+      </div>
+      <div class="module reveal">
+        <div class="idx">08</div>
+        <div class="body">
+          <h3>{% trans "Direct Postgres Integration in Python Applications" %}</h3>
+          <p>{% blocktrans %}Tie it together in code. <span class="mono">psycopg 3</span>, async with <span class="mono">asyncpg</span>, SQLAlchemy 2.0 Core vs ORM, migrations, and avoiding the N+1 trap for good.{% endblocktrans %}</p>
+          <div class="topics"><span class="chip">psycopg3</span><span class="chip">asyncpg</span><span class="chip">SQLAlchemy</span><span class="chip">Alembic</span></div>
+        </div>
+        <div class="dur">{% trans "4 lessons · 47m" %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="section" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% trans "outcomes" %}</span>
+      <h2>{% trans "What you'll be able to do after." %}</h2>
+    </div>
+    <div class="out-grid">
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Write raw SQL with confidence" %}</h3><p>{% trans "Drop out of the ORM whenever the situation calls for it — and know exactly what query you're running." %}</p></div>
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Diagnose a slow query in minutes" %}</h3><p>{% trans "Read a query plan, find the bottleneck, and prove your fix worked with real numbers." %}</p></div>
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Design indexes that get used" %}</h3><p>{% trans "Match the index to the access pattern instead of guessing and hoping." %}</p></div>
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Model JSON without regret" %}</h3><p>{% trans "Know when JSONB is the right call and how to keep it fast as it grows." %}</p></div>
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Survive concurrency" %}</h3><p>{% trans "Pick the right isolation level and avoid the deadlocks and lost updates that bite in production." %}</p></div>
+      <div class="out reveal"><span class="ck">→</span><h3>{% trans "Connect Python the right way" %}</h3><p>{% trans "Pooling, async, and migrations set up so your app and your database actually cooperate." %}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CODE DEMO -->
+<section class="section" id="demo" style="padding-top:40px">
+  <div class="wrap">
+    <div class="demo-grid">
+      <div class="reveal">
+        <span class="eyebrow">{% trans "a taste of the work" %}</span>
+        <h2 style="font-size:clamp(28px,3.6vw,40px);margin-top:18px">{% blocktrans %}Same result.<br />One of them is faster.{% endblocktrans %}</h2>
+        <p style="color:var(--fg-muted);font-size:17px;margin-top:18px">{% trans "While most courses just hand you the syntax, we dive in where the ORM fades out. We look under the hood to see exactly why your database behaves the way it does—and how to stop it from doing wasted work. Check out a live breakdown from Module 3." %}</p>
+      </div>
+      <div class="reveal">
+        <div class="demo-tabs">
+          <button class="demo-tab active" data-tab="orm">the_orm.py</button>
+          <button class="demo-tab" data-tab="sql">raw.sql</button>
+          <button class="demo-tab" data-tab="plan">explain.txt</button>
+        </div>
+        <div class="term">
+          <div class="term-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="title" id="demoTitle">the_orm.py</span>
+          </div>
+          <div class="term-body" style="min-height:248px">
+            <div class="demo-panel active" data-panel="orm">
+              <span class="ln"><span class="com"># looks innocent. fires 1 + N queries.</span></span>
+              <span class="ln">authors = <span class="fn">Author</span>.objects.<span class="fn">all</span>()</span>
+              <span class="ln"><span class="kw">for</span> a <span class="kw">in</span> authors:</span>
+              <span class="ln">    <span class="fn">print</span>(a.name, a.books.<span class="fn">count</span>())</span>
+              <div class="term-result">
+                <div class="rrow"><span>queries issued</span><span style="color:oklch(0.72 0.16 30)">1 + 1,204</span></div>
+                <div class="rrow"><span>total time</span><span style="color:oklch(0.72 0.16 30)">2.41 s</span></div>
+                <div class="rrow" style="margin-top:8px"><span class="com"># the classic N+1. you've shipped this.</span><span></span></div>
+              </div>
+            </div>
+            <div class="demo-panel" data-panel="sql">
+              <span class="ln"><span class="com">-- one query. the planner does the work.</span></span>
+              <span class="ln"><span class="kw">SELECT</span> a.name, <span class="fn">count</span>(b.id)</span>
+              <span class="ln"><span class="kw">FROM</span> authors a</span>
+              <span class="ln"><span class="kw">LEFT JOIN</span> books b <span class="kw">ON</span> b.author_id = a.id</span>
+              <span class="ln"><span class="kw">GROUP BY</span> a.name;</span>
+              <div class="term-result">
+                <div class="rrow"><span>queries issued</span><span class="ok">1</span></div>
+                <div class="rrow"><span>total time</span><span class="ok">11 ms</span></div>
+                <div class="rrow" style="margin-top:8px"><span class="com">-- ~219× faster. same data.</span><span></span></div>
+              </div>
+            </div>
+            <div class="demo-panel" data-panel="plan">
+              <span class="ln"><span class="com">-- and here's how you'd prove it</span></span>
+              <span class="ln"><span class="kw">HashAggregate</span>  (actual rows=<span class="num">1204</span>)</span>
+              <span class="ln">  -&gt; <span class="kw">Hash Left Join</span>  (rows=<span class="num">88k</span>)</span>
+              <span class="ln">       Hash Cond: (b.author_id = a.id)</span>
+              <span class="ln">     -&gt; <span class="kw">Index Scan</span> on books_author_idx</span>
+              <div class="term-result">
+                <div class="rrow"><span>Execution Time</span><span class="ok">11.04 ms</span></div>
+                <div class="rrow" style="margin-top:8px"><span class="com">-- module 3 teaches you to read every line</span><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="section" id="waitlist" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin:0 auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">{% trans "waitlist" %}</span>
+      <h2>{% trans "Course launching soon." %}</h2>
+      <p style="margin-left:auto;margin-right:auto">{% trans "Drop your email and you'll be the first to know — plus get early-bird pricing when we open." %}</p>
+    </div>
+    <div class="waitlist-wrap">
+      {% if confirmed %}
+      <div class="waitlist-card reveal waitlist-confirmed">
+        <span class="waitlist-check">✓</span>
+        <h3>{% trans "You're on the list." %}</h3>
+        <p>{% trans "We'll email you as soon as the course opens. Early-bird pricing is yours." %}</p>
+      </div>
+      {% else %}
+      <div class="waitlist-card reveal">
+        <div class="tier">waitlist</div>
+        <p class="waitlist-sub">{% trans "No spam. One email when we launch." %}</p>
+        {% crispy form %}
+        <ul>
+          <li><span class="tick">✓</span><span>{% blocktrans %}All <b>8 modules · 47 lessons</b> · 6.5 hours of video{% endblocktrans %}</span></li>
+          <li><span class="tick">✓</span><span>{% blocktrans %}<b>Free lifetime updates</b> as Postgres evolves{% endblocktrans %}</span></li>
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% trans "faq" %}</span>
+      <h2>{% trans "Questions, answered." %}</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "Do I need to know SQL already?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "No. Module 1 starts from relational foundations. You do need to be comfortable writing Python and to have used a database through an ORM before — if you've shipped a Django or Flask app, you're ready." %}</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "Do I need to install Postgres locally?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "Not unless you want to. Every student gets a personal cloud Postgres instance pre-loaded with the course datasets, so you can run real queries from lesson one. Local setup instructions are included if you'd rather work offline." %}</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "Which versions does the course use?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "PostgreSQL 16 on the server side, and Python 3.12 with psycopg 3, SQLAlchemy 2.0 and asyncpg in the code samples. The concepts apply cleanly to Postgres 12 through 17 — version-specific notes are called out where they matter." %}</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "Is this just SQL, or Python too?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "Both, deliberately. You'll learn Postgres deeply, then the final module ties every concept back to real Python — connection handling, async, pooling, migrations and avoiding the N+1 trap in your own apps." %}</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "How long do I have access?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "Forever. It's a one-time purchase with lifetime access, including all future updates to the material at no extra cost." %}</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">{% trans "What if it's not for me?" %} <span class="pm">+</span></div>
+        <div class="faq-a"><p>{% trans "There's a 30-day, no-questions-asked money-back guarantee. If the course isn't moving your Postgres skills forward, email us and we'll refund you in full." %}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">{% blocktrans %}Stop fighting your ORM.<br />Learn the database underneath.{% endblocktrans %}</h2>
+    <div class="hero-cta reveal">
+      <a href="#waitlist" class="btn btn-primary">{% trans "Join the waitlist" %} <span class="arrow">→</span></a>
+      <a href="#curriculum" class="btn btn-ghost">{% trans "See what's inside" %}</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <a href="#top" class="logo"><span class="mark"></span> {% trans "Deep Dive PostgreSQL Course" %}</a>
+      <div class="fmeta" style="margin-top:10px">{% trans "© 2026 · built by a dev, for devs" %}</div>
+    </div>
+    <nav class="flinks">
+      <a href="#who">{% trans "Who it's for" %}</a>
+      <a href="#curriculum">{% trans "Curriculum" %}</a>
+      <a href="#faq">{% trans "FAQ" %}</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="{% static 'marketing/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'marketing/js/landingpage.js' %}"></script>
+</body>
+</html>

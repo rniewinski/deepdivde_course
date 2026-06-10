@@ -1,0 +1,651 @@
+# Polish translations for deepdive_course.
+# Copyright (C) 2026
+# rafal.niewinski@tylko.com, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: deepdive_course\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-31 16:02+0000\n"
+"PO-Revision-Date: 2026-05-30 16:50+0200\n"
+"Last-Translator: Rafal Niewinski <rafal.niewinski@tylko.com>\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: deepdive_course/settings.py:116
+msgid "English"
+msgstr ""
+
+#: deepdive_course/settings.py:117
+msgid "Polish"
+msgstr ""
+
+#: marketing/forms.py:24
+msgid "your@email.com"
+msgstr "Wpisz swój adres e-mail"
+
+#: marketing/forms.py:25 marketing/templates/marketing/landingpage.html:51
+#: marketing/templates/marketing/landingpage.html:359
+msgid "Join the waitlist"
+msgstr "Dołącz do listy oczekujących"
+
+#: marketing/models.py:7
+msgid "This email is already on the waitlist."
+msgstr "Ten adres e-mail jest już na liście oczekujących."
+
+#: marketing/templates/marketing/landingpage.html:8
+msgid "Postgres for Python Developers"
+msgstr "Postgres dla Programistów Python"
+
+#: marketing/templates/marketing/landingpage.html:28
+#: marketing/templates/marketing/landingpage.html:370
+msgid "Deep Dive PostgreSQL Course"
+msgstr ""
+
+#: marketing/templates/marketing/landingpage.html:30
+#: marketing/templates/marketing/landingpage.html:374
+msgid "Who it's for"
+msgstr "Dla kogo"
+
+#: marketing/templates/marketing/landingpage.html:31
+#: marketing/templates/marketing/landingpage.html:375
+msgid "Curriculum"
+msgstr "Program kursu"
+
+#: marketing/templates/marketing/landingpage.html:32
+msgid "Preview"
+msgstr "Podgląd"
+
+#: marketing/templates/marketing/landingpage.html:33
+#: marketing/templates/marketing/landingpage.html:376
+msgid "FAQ"
+msgstr "FAQ"
+
+#: marketing/templates/marketing/landingpage.html:36
+msgid "Join waitlist"
+msgstr "Dołącz do listy"
+
+#: marketing/templates/marketing/landingpage.html:48
+msgid ""
+"You know Python.<br />Time you actually<br />knew your <span "
+"class=\"hl\">database</span>."
+msgstr ""
+"Znasz Pythona.<br />Czas żebyś naprawdę<br />poznał swoją <span "
+"class=\"hl\">bazę danych</span>."
+
+#: marketing/templates/marketing/landingpage.html:49
+msgid ""
+"A hands-on PostgreSQL course for developers who've been getting by on the "
+"ORM. Indexes, query plans, JSONB, transactions and real performance work — "
+"explained the way an engineer actually needs them."
+msgstr ""
+"Praktyczny kurs PostgreSQL dla programistów, którzy do tej pory radzili "
+"sobie dzięki ORM. Indeksy, plany zapytań, JSONB, transakcje i prawdziwa "
+"optymalizacja zapytań - wyjaśnione z perspektywy praktyka."
+
+#: marketing/templates/marketing/landingpage.html:52
+msgid "View curriculum"
+msgstr "Zobacz program"
+
+#: marketing/templates/marketing/landingpage.html:55
+msgid "modules"
+msgstr "modułów"
+
+#: marketing/templates/marketing/landingpage.html:56
+msgid "lessons"
+msgstr "lekcji"
+
+#: marketing/templates/marketing/landingpage.html:57
+msgid "of video"
+msgstr "wideo"
+
+#: marketing/templates/marketing/landingpage.html:58
+msgid "cloud DB access"
+msgstr "dostęp do bazy danych w chmurze"
+
+#: marketing/templates/marketing/landingpage.html:87
+msgid "Expert knowledge and technologies used in this course:"
+msgstr "Ekspercka wiedza i technologie, z których korzystamy w tym kursie:"
+
+#: marketing/templates/marketing/landingpage.html:102
+msgid "who it's for"
+msgstr "dla kogo"
+
+#: marketing/templates/marketing/landingpage.html:103
+msgid "Built for the dev the ORM has been carrying."
+msgstr "Stworzony dla programisty, którego ORM dotąd wyręczał."
+
+#: marketing/templates/marketing/landingpage.html:104
+msgid ""
+"If you ship features fine but the database feels like a black box, this is "
+"for you. Sound familiar?"
+msgstr ""
+"Jeśli używasz ORM-a bez problemu, ale baza danych wygląda dla ciebie jak "
+"czarna skrzynka — ten kurs jest dla ciebie. Brzmi znajomo?"
+
+#: marketing/templates/marketing/landingpage.html:108
+msgid ""
+"You reach for <span class=\"mono\">.filter()</span> and freeze at a raw JOIN"
+msgstr ""
+"Sięgasz po <span class=\"mono\">.filter()</span> i zacinasz się przy surowym "
+"JOINie"
+
+#: marketing/templates/marketing/landingpage.html:109
+msgid ""
+"The ORM is comfortable. The moment you drop to SQL — or someone asks for a "
+"query it can't express — you're guessing."
+msgstr ""
+"ORM jest wygodny. Ale w momencie, gdy schodzisz do SQL — albo ktoś prosi o "
+"zapytanie, którego ORM nie potrafi wyrazić — strzelasz na oślep."
+
+#: marketing/templates/marketing/landingpage.html:112
+msgid "<span class=\"mono\">EXPLAIN ANALYZE</span> looks like hieroglyphics"
+msgstr "<span class=\"mono\">EXPLAIN ANALYZE</span> wygląda jak hieroglify"
+
+#: marketing/templates/marketing/landingpage.html:113
+msgid ""
+"You've heard it's how you find slow queries. You've also never been able to "
+"read the output past line one."
+msgstr ""
+"Słyszałeś, że tak właśnie znajduje się wolne zapytania. Ale nigdy nie byłeś "
+"w stanie przeczytać wyniku dalej niż pierwsza linijka."
+
+#: marketing/templates/marketing/landingpage.html:116
+msgid "Everything works — until there's a million rows"
+msgstr "Wszystko działa — dopóki nie pojawi się milion rekordów"
+
+#: marketing/templates/marketing/landingpage.html:117
+msgid ""
+"Local is instant. Production crawls. You add a random index, pray, and don't "
+"really know if it helped."
+msgstr ""
+"Lokalnie jest błyskawicznie. Produkcja się wlecze. Dodajesz losowy indeks, "
+"modlisz się i tak naprawdę nie wiesz, czy pomogło."
+
+#: marketing/templates/marketing/landingpage.html:127
+msgid "the curriculum"
+msgstr "program kursu"
+
+#: marketing/templates/marketing/landingpage.html:128
+msgid "Eight modules — from core basics to an architecture-aware developer."
+msgstr "Osiem modułów — od kluczowych podstaw do świadomego dewelopera."
+
+#: marketing/templates/marketing/landingpage.html:129
+msgid ""
+"Each module wraps up with a comprehensive knowledge test. It’s your chance "
+"to check your readiness, eliminate bad habits, and see in black and white "
+"exactly which topics you’ve already mastered to perfection."
+msgstr ""
+"Każdy moduł zamykamy przekrojowym testem wiedzy. Sprawdzasz swoje "
+"przygotowanie, eliminujesz błędne nawyki i widzisz czarno na białym, które "
+"zagadnienia masz już opanowane do perfekcji."
+
+#: marketing/templates/marketing/landingpage.html:135
+msgid "Relational foundations the ORM hides from you"
+msgstr "Relacyjne podstawy, które ORM przed tobą ukrywa"
+
+#: marketing/templates/marketing/landingpage.html:136
+msgid ""
+"What a table, row, and type actually are on disk. Primary keys, constraints, "
+"and why the database — not your Python — should guard data integrity."
+msgstr ""
+"Czym naprawdę są tabele, krotki. klucze główne, ograniczenia i dlaczego to "
+"baza danych — nie twoja aplikacja — powinna strzec integralności danych."
+
+#: marketing/templates/marketing/landingpage.html:139
+msgid "5 lessons · 38m"
+msgstr "5 lekcji · 38 min"
+
+#: marketing/templates/marketing/landingpage.html:144
+msgid "Indexes: B-tree, GIN, BRIN — and when each wins"
+msgstr "Indeksy: B-tree, GIN, BRIN — i kiedy każdy wygrywa"
+
+#: marketing/templates/marketing/landingpage.html:145
+msgid ""
+"The single biggest lever on query speed. Build the right index for the "
+"access pattern, and learn why half of yours are never used."
+msgstr ""
+"Największa pojedyncza dźwignia szybkości zapytań. Zbuduj właściwy indeks dla "
+"wzorca dostępu i dowiedz się, dlaczego połowa twoich indeksów nigdy nie jest "
+"używana."
+
+#: marketing/templates/marketing/landingpage.html:148
+msgid "7 lessons · 1h 04m"
+msgstr "7 lekcji · 1 godz. 04 min"
+
+#: marketing/templates/marketing/landingpage.html:153
+msgid "Reading the query planner"
+msgstr "Czytanie planera zapytań"
+
+#: marketing/templates/marketing/landingpage.html:154
+msgid ""
+"Finally make <span class=\"mono\">EXPLAIN ANALYZE</span> readable. Seq scans "
+"vs index scans, estimated vs actual rows, and how to spot the line that's "
+"costing you a second."
+msgstr ""
+"W końcu <span class=\"mono\">EXPLAIN ANALYZE</span> będzie czytelny. Seq "
+"scany kontra index scany, szacowane kontra rzeczywiste wiersze i jak znaleźć "
+"linię, która kosztuje cię sekundy."
+
+#: marketing/templates/marketing/landingpage.html:157
+msgid "6 lessons · 52m"
+msgstr "6 lekcji · 52 min"
+
+#: marketing/templates/marketing/landingpage.html:162
+msgid "Joins, CTEs &amp; window functions"
+msgstr "Joiny, CTE i funkcje okna"
+
+#: marketing/templates/marketing/landingpage.html:163
+msgid ""
+"The SQL the ORM can't write for you. Running totals, rankings, deduplication "
+"and reporting queries you'll actually reuse at work."
+msgstr ""
+"SQL, którego ORM nie napisze za ciebie. Narastające sumy, rankingi, "
+"deduplikacja i zapytania raportowe, których naprawdę będziesz reużywał w "
+"pracy."
+
+#: marketing/templates/marketing/landingpage.html:166
+msgid "8 lessons · 1h 11m"
+msgstr "8 lekcji · 1 godz. 11 min"
+
+#: marketing/templates/marketing/landingpage.html:171
+msgid "JSONB &amp; semi-structured data"
+msgstr "JSONB i dane półustrukturyzowane"
+
+#: marketing/templates/marketing/landingpage.html:172
+msgid ""
+"When to reach for JSONB and when it'll wreck you. Querying, indexing and "
+"updating JSON without turning Postgres into a slow document store."
+msgstr ""
+"Kiedy sięgać po JSONB i kiedy cię to zniszczy. Odpytywanie, indeksowanie i "
+"aktualizowanie JSON bez zamieniania Postgresa w wolny magazyn dokumentów."
+
+#: marketing/templates/marketing/landingpage.html:175
+msgid "5 lessons · 41m"
+msgstr "5 lekcji · 41 min"
+
+#: marketing/templates/marketing/landingpage.html:180
+msgid "Transactions, isolation &amp; locking"
+msgstr "Transakcje, izolacja i blokady"
+
+#: marketing/templates/marketing/landingpage.html:181
+msgid ""
+"The bugs that only show up under concurrency. Isolation levels, lost "
+"updates, deadlocks, and <span class=\"mono\">SELECT ... FOR UPDATE</span> "
+"done correctly."
+msgstr ""
+"Błędy, które pojawiają się tylko przy współbieżności. Poziomy izolacji, "
+"utracone aktualizacje, zakleszczenia i <span class=\"mono\">SELECT ... FOR "
+"UPDATE</span>."
+
+#: marketing/templates/marketing/landingpage.html:184
+msgid "6 lessons · 49m"
+msgstr "6 lekcji · 49 min"
+
+#: marketing/templates/marketing/landingpage.html:189
+msgid "Performance tuning &amp; connection pooling"
+msgstr "Strojenie wydajności i connection pooling"
+
+#: marketing/templates/marketing/landingpage.html:190
+msgid ""
+"From a slow endpoint to a fix. Caching, <span class=\"mono\">VACUUM</span>, "
+"bloat, pooling with PgBouncer, and the settings that actually matter."
+msgstr ""
+"Od wolnego endpointu do naprawy. Cachowanie, <span class=\"mono\">VACUUM</"
+"span>, bloat, pooling z PgBouncerem i ustawienia, które naprawdę mają "
+"znaczenie."
+
+#: marketing/templates/marketing/landingpage.html:193
+msgid "6 lessons · 58m"
+msgstr "6 lekcji · 58 min"
+
+#: marketing/templates/marketing/landingpage.html:198
+msgid "Direct Postgres Integration in Python Applications"
+msgstr "Bezpośrednia integracja Postgresa w aplikacjach."
+
+#: marketing/templates/marketing/landingpage.html:199
+msgid ""
+"Tie it together in code. <span class=\"mono\">psycopg 3</span>, async with "
+"<span class=\"mono\">asyncpg</span>, SQLAlchemy 2.0 Core vs ORM, migrations, "
+"and avoiding the N+1 trap for good."
+msgstr ""
+"Połącz wszystko w kodzie. <span class=\"mono\">psycopg 3</span>, async z "
+"<span class=\"mono\">asyncpg</span>, SQLAlchemy 2.0 Core kontra ORM, "
+"migracje i unikanie pułapki N+1 raz na zawsze."
+
+#: marketing/templates/marketing/landingpage.html:202
+msgid "4 lessons · 47m"
+msgstr "4 lekcje · 47 min"
+
+#: marketing/templates/marketing/landingpage.html:212
+msgid "outcomes"
+msgstr "rezultaty"
+
+#: marketing/templates/marketing/landingpage.html:213
+msgid "What you'll be able to do after."
+msgstr "Co będziesz potrafił po kursie."
+
+#: marketing/templates/marketing/landingpage.html:216
+msgid "Write raw SQL with confidence"
+msgstr "Zrozumienie surowego SQLa"
+
+#: marketing/templates/marketing/landingpage.html:216
+msgid ""
+"Drop out of the ORM whenever the situation calls for it — and know exactly "
+"what query you're running."
+msgstr ""
+"Wychodź z ORM zawsze, gdy sytuacja tego wymaga — i wiedz dokładnie, jakie "
+"zapytanie uruchamiasz."
+
+#: marketing/templates/marketing/landingpage.html:217
+msgid "Diagnose a slow query in minutes"
+msgstr "Zdiagnozuj wolne zapytanie w kilka minut"
+
+#: marketing/templates/marketing/landingpage.html:217
+msgid ""
+"Read a query plan, find the bottleneck, and prove your fix worked with real "
+"numbers."
+msgstr ""
+"Przeczytaj plan zapytania, znajdź wąskie gardło i udowodnij, że twoja "
+"naprawa zadziałała."
+
+#: marketing/templates/marketing/landingpage.html:218
+msgid "Design indexes that get used"
+msgstr "Projektuj indeksy, które są używane"
+
+#: marketing/templates/marketing/landingpage.html:218
+msgid "Match the index to the access pattern instead of guessing and hoping."
+msgstr "Dopasuj indeks do wzorca dostępu zamiast zgadywać i mieć nadzieję."
+
+#: marketing/templates/marketing/landingpage.html:219
+msgid "Model JSON without regret"
+msgstr "Modeluj JSON bez żalu"
+
+#: marketing/templates/marketing/landingpage.html:219
+msgid "Know when JSONB is the right call and how to keep it fast as it grows."
+msgstr ""
+"Wiedz, kiedy JSONB to właściwy wybór i jak utrzymać go szybkim w miarę "
+"wzrostu."
+
+#: marketing/templates/marketing/landingpage.html:220
+msgid "Survive concurrency"
+msgstr "Przeżyj współbieżność"
+
+#: marketing/templates/marketing/landingpage.html:220
+msgid ""
+"Pick the right isolation level and avoid the deadlocks and lost updates that "
+"bite in production."
+msgstr ""
+"Wybierz właściwy poziom izolacji i unikaj zakleszczeń i utraconych "
+"aktualizacji, które gryzą na produkcji."
+
+#: marketing/templates/marketing/landingpage.html:221
+msgid "Connect Python the right way"
+msgstr "Połącz Pythona we właściwy sposób"
+
+#: marketing/templates/marketing/landingpage.html:221
+msgid ""
+"Pooling, async, and migrations set up so your app and your database actually "
+"cooperate."
+msgstr ""
+"Pooling, async i migracje skonfigurowane tak, żeby twoja aplikacja i baza "
+"danych naprawdę współpracowały."
+
+#: marketing/templates/marketing/landingpage.html:231
+msgid "a taste of the work"
+msgstr "przedsmak pracy"
+
+#: marketing/templates/marketing/landingpage.html:232
+msgid "Same result.<br />One of them is faster."
+msgstr "Ten sam wynik.<br />Jedno rozwiązanie jest o wiele szybsze."
+
+#: marketing/templates/marketing/landingpage.html:233
+msgid ""
+"While most courses just hand you the syntax, we dive in where the ORM fades "
+"out. We look under the hood to see exactly why your database behaves the way "
+"it does—and how to stop it from doing wasted work. Check out a live "
+"breakdown from Module 3."
+msgstr ""
+"Większość poradników rzuca tylko suchą składnią. My idziemy krok dalej – "
+"tam, gdzie automatyczne frameworki już nie pomogą. Sprawdzamy, co dzieje się "
+"pod maską ORMa."
+
+#: marketing/templates/marketing/landingpage.html:292
+msgid "waitlist"
+msgstr "lista oczekujących"
+
+#: marketing/templates/marketing/landingpage.html:293
+msgid "Course launching soon."
+msgstr "Kurs wkrótce dostępny."
+
+#: marketing/templates/marketing/landingpage.html:294
+msgid ""
+"Drop your email and you'll be the first to know — plus get early-bird "
+"pricing when we open."
+msgstr ""
+"Wpisz swój e-mail – dostaniesz powiadomienie, gdy tylko kurs ujrzy światło "
+"dzienne i ruszy sprzedaż."
+
+#: marketing/templates/marketing/landingpage.html:300
+msgid "You're on the list."
+msgstr "Dziękujemy za zapis!"
+
+#: marketing/templates/marketing/landingpage.html:301
+msgid ""
+"We'll email you as soon as the course opens. Early-bird pricing is yours."
+msgstr "Wyślemy ci wiadomość, gdy tylko kurs zostanie otwarty."
+
+#: marketing/templates/marketing/landingpage.html:306
+msgid "No spam. One email when we launch."
+msgstr "Zero spamu. Jeden e-mail przy starcie."
+
+#: marketing/templates/marketing/landingpage.html:309
+msgid "All <b>8 modules · 47 lessons</b> · 6.5 hours of video"
+msgstr "Wszystkie <b>8 modułów · 47 lekcji</b> · 6,5 godziny wideo"
+
+#: marketing/templates/marketing/landingpage.html:310
+msgid "<b>Free lifetime updates</b> as Postgres evolves"
+msgstr "<b>Bezpłatne aktualizacje dożywotnie</b> wraz z rozwojem kursu"
+
+#: marketing/templates/marketing/landingpage.html:322
+msgid "faq"
+msgstr "FAQ"
+
+#: marketing/templates/marketing/landingpage.html:323
+msgid "Questions, answered."
+msgstr "Pytania i odpowiedzi."
+
+#: marketing/templates/marketing/landingpage.html:327
+msgid "Do I need to know SQL already?"
+msgstr "Czy muszę już znać SQL?"
+
+#: marketing/templates/marketing/landingpage.html:328
+msgid ""
+"No. Module 1 starts from relational foundations. You do need to be "
+"comfortable writing Python and to have used a database through an ORM before "
+"— if you've shipped a Django or Flask app, you're ready."
+msgstr ""
+"Niezależnie od Twojego poziomu — to miejsce dla Ciebie. Jasne, znajomość "
+"podstaw Pythona i baz danych ułatwia start, ale jeśli ich nie posiadasz, "
+"pokażemy Ci wszystko po kolei. Początkujący dostaną solidne, poukładane "
+"fundamenty, a zaawansowani deweloperzy — głęboką wiedzę o optymalizacji i "
+"mechanice bazy"
+
+#: marketing/templates/marketing/landingpage.html:331
+msgid "Do I need to install Postgres locally?"
+msgstr "Czy muszę instalować Postgres lokalnie?"
+
+#: marketing/templates/marketing/landingpage.html:332
+msgid ""
+"Not unless you want to. Every student gets a personal cloud Postgres "
+"instance pre-loaded with the course datasets, so you can run real queries "
+"from lesson one. Local setup instructions are included if you'd rather work "
+"offline."
+msgstr ""
+"Nie musisz się martwić o przygotowanie środowiska. Każdy student otrzymuje "
+"kompletny, gotowy playbook, który krok po kroku przeprowadzi Cię przez cały "
+"proces. Co więcej, konfiguracji lokalnej poświęciliśmy całą osobną lekcję — "
+"wspólnie postawimy wszystko na Twoim komputerze, żebyś od samego początku "
+"mógł bez przeszkód uruchamiać prawdziwe zapytania."
+
+#: marketing/templates/marketing/landingpage.html:335
+msgid "Which versions does the course use?"
+msgstr "Jakich wersji używa kurs?"
+
+#: marketing/templates/marketing/landingpage.html:336
+msgid ""
+"PostgreSQL 16 on the server side, and Python 3.12 with psycopg 3, SQLAlchemy "
+"2.0 and asyncpg in the code samples. The concepts apply cleanly to Postgres "
+"12 through 17 — version-specific notes are called out where they matter."
+msgstr ""
+"PostgreSQL 16 po stronie serwera i Python 3.12 z psycopg 3, SQLAlchemy 2.0 i "
+"asyncpg w przykładach kodu. Koncepcje stosują się czysto do Postgresa od "
+"wersji 12 do 17 — uwagi dotyczące konkretnych wersji są zaznaczone tam, "
+"gdzie mają znaczenie."
+
+#: marketing/templates/marketing/landingpage.html:339
+msgid "Is this just SQL, or Python too?"
+msgstr "Czy to tylko SQL, czy też Python?"
+
+#: marketing/templates/marketing/landingpage.html:340
+msgid ""
+"Both, deliberately. You'll learn Postgres deeply, then the final module ties "
+"every concept back to real Python — connection handling, async, pooling, "
+"migrations and avoiding the N+1 trap in your own apps."
+msgstr ""
+"Oba, celowo. Nauczysz się Postgresa dogłębnie, a ostatni moduł łączy każdą "
+"koncepcję z prawdziwym Pythonem — obsługa połączeń, async, pooling, migracje "
+"i unikanie pułapki N+1 w twoich własnych aplikacjach."
+
+#: marketing/templates/marketing/landingpage.html:343
+msgid "How long do I have access?"
+msgstr "Jak długo mam dostęp?"
+
+#: marketing/templates/marketing/landingpage.html:344
+msgid ""
+"Forever. It's a one-time purchase with lifetime access, including all future "
+"updates to the material at no extra cost."
+msgstr ""
+"Na zawsze. To jednorazowy zakup z dożywotnim dostępem, łącznie ze wszystkimi "
+"przyszłymi aktualizacjami materiałów bez dodatkowych kosztów."
+
+#: marketing/templates/marketing/landingpage.html:347
+msgid "What if it's not for me?"
+msgstr "Co jeśli to nie dla mnie?"
+
+#: marketing/templates/marketing/landingpage.html:348
+msgid ""
+"There's a 30-day, no-questions-asked money-back guarantee. If the course "
+"isn't moving your Postgres skills forward, email us and we'll refund you in "
+"full."
+msgstr ""
+"Mamy 30-dniową gwarancję zwrotu pieniędzy bez zadawania pytań. Jeśli kurs "
+"nie posuwa twoich umiejętności Postgres do przodu, napisz do nas e-mail, a "
+"zwrócimy ci pełną kwotę."
+
+#: marketing/templates/marketing/landingpage.html:357
+msgid "Stop fighting your ORM.<br />Learn the database underneath."
+msgstr "Przestań walczyć z ORM.<br />Poznaj bazę danych od środka."
+
+#: marketing/templates/marketing/landingpage.html:360
+msgid "See what's inside"
+msgstr "Zobacz co w środku"
+
+#: marketing/templates/marketing/landingpage.html:371
+msgid "© 2026 · built by a dev, for devs"
+msgstr "© 2026 · stworzone, dla developerów."
+
+#~ msgid "Postgres for Python Devs"
+#~ msgstr "Postgres dla Devów Python"
+
+#~ msgid "Get the course"
+#~ msgstr "Kup kurs"
+
+#~ msgid "Start learning"
+#~ msgstr "Zacznij się uczyć"
+
+#~ msgid "instructor photo →"
+#~ msgstr "zdjęcie instruktora →"
+
+#~ msgid "your instructor"
+#~ msgstr "twój instruktor"
+
+#~ msgid ""
+#~ "\"I spent years writing Python that treated Postgres as a dumb box to "
+#~ "dump rows in. <span class=\"hl\">Learning the database underneath made me "
+#~ "a dramatically better engineer</span> — this is the course I wish I'd had."
+#~ "\""
+#~ msgstr ""
+#~ "\"Spędziłem lata pisząc Python, który traktował Postgres jak głupią "
+#~ "skrzynkę do wrzucania wierszy. <span class=\"hl\">Poznanie bazy danych od "
+#~ "środka sprawiło, że stałem się dramatycznie lepszym inżynierem</span> — "
+#~ "to jest kurs, który chciałbym mieć.\""
+
+#~ msgid "Your Name Here"
+#~ msgstr "Twoje Imię i Nazwisko"
+
+#~ msgid "Python developer · 10+ yrs building data-heavy backends"
+#~ msgstr ""
+#~ "Programista Python · 10+ lat budowania backendu przetwarzającego duże "
+#~ "ilości danych"
+
+#~ msgid "Your own <b>cloud Postgres instance</b> for every exercise"
+#~ msgstr ""
+#~ "Twoja własna <b>instancja Postgres w chmurze</b> do każdego ćwiczenia"
+
+#~ msgid ""
+#~ "Join the developers turning Postgres from a black box into their sharpest "
+#~ "tool."
+#~ msgstr ""
+#~ "Dołącz do programistów zamieniających Postgres z czarnej skrzynki w swoje "
+#~ "najostrzejsze narzędzie."
+
+#~ msgid "Pricing"
+#~ msgstr "Cennik"
+
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
+
+#~ msgid "Enroll"
+#~ msgstr "Zapisz się"
+
+#~ msgid "pricing"
+#~ msgstr "cennik"
+
+#~ msgid "One price. Lifetime access."
+#~ msgstr "Jedna cena. Dostęp dożywotni."
+
+#~ msgid ""
+#~ "No subscription, no upsells. Buy it once, keep it — including every "
+#~ "future update to the course."
+#~ msgstr ""
+#~ "Bez subskrypcji, bez upsellingu. Kup raz, miej na zawsze — łącznie ze "
+#~ "wszystkimi przyszłymi aktualizacjami kursu."
+
+#~ msgid "Early-bird pricing — one-time payment, lifetime access."
+#~ msgstr ""
+#~ "Cena dla wczesnych nabywców — jednorazowa płatność, dożywotni dostęp."
+
+#~ msgid "<b>Downloadable datasets</b> &amp; SQL playgrounds"
+#~ msgstr "<b>Zestawy danych do pobrania</b> i SQL playground"
+
+#~ msgid "Python code samples for <b>psycopg, SQLAlchemy &amp; asyncpg</b>"
+#~ msgstr "Przykłady kodu Python dla <b>psycopg, SQLAlchemy i asyncpg</b>"
+
+#~ msgid "Certificate of completion"
+#~ msgstr "Certyfikat ukończenia"
+
+#~ msgid "Enroll now"
+#~ msgstr "Zapisz się teraz"
+
+#~ msgid "30-day money-back guarantee · no questions asked"
+#~ msgstr "30-dniowa gwarancja zwrotu pieniędzy · bez zadawania pytań"
+
+#~ msgid "Get the course — $149"
+#~ msgstr "Kup kurs — 149 USD"
