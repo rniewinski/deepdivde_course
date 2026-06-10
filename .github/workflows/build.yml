@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./compose/production/Dockerfile
+          file: ./compose/prod/Dockerfile
           push: true
           tags: |
             ${{ env.DJANGO_IMAGE }}:latest
