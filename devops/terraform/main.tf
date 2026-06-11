@@ -68,6 +68,7 @@ resource "aws_instance" "app" {
     django_image      = var.django_image
     ghcr_username     = var.ghcr_username
     ghcr_token        = var.ghcr_token
+    allowed_hosts     = var.allowed_hosts
   })
 
   tags = {

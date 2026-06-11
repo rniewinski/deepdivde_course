@@ -32,7 +32,7 @@ EOF
 cat > /app/.env << 'EOF'
 DEBUG=False
 SECRET_KEY=${django_secret_key}
-ALLOWED_HOSTS=${public_ip}
+ALLOWED_HOSTS=${public_ip},${join(",", allowed_hosts)}
 DJANGO_IMAGE=${django_image}
 EOF
 

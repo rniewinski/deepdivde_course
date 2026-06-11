@@ -22,19 +22,6 @@ variable "key_name" {
   default     = ""
 }
 
-variable "app_git_url" {
-  description = "Git repository HTTPS URL (without credentials)"
-  type        = string
-  default     = "https://github.com/your-user/deepdivde_course.git"
-}
-
-variable "git_token" {
-  description = "GitHub/GitLab Personal Access Token for private repos (leave empty for public)"
-  type        = string
-  default     = ""
-  sensitive   = true
-}
-
 variable "django_secret_key" {
   description = "Django SECRET_KEY for production"
   type        = string
@@ -56,4 +43,10 @@ variable "django_image" {
   description = "Full GHCR image reference to deploy, e.g. ghcr.io/your-username/deepdive_course:latest"
   type        = string
   default     = ""
+}
+
+variable "allowed_hosts" {
+  description = "List of allowed hostnames for Django ALLOWED_HOSTS"
+  type        = list(string)
+  default     = ["pgdeepdive.pl"]
 }
