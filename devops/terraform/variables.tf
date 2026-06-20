@@ -48,5 +48,5 @@ variable "django_image" {
 variable "allowed_hosts" {
   description = "List of allowed hostnames for Django ALLOWED_HOSTS"
   type        = list(string)
-  default     = ["pgdeepdive.pl"]
+  default     = ["pgdeepdive.pl", "www.pgdeepdive.pl"]
 }

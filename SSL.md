@@ -23,28 +23,18 @@ sudo apt install certbot python3-certbot-nginx   # for Nginx
 sudo apt install certbot python3-certbot-apache  # for Apache
 ```
 
-### RHEL / CentOS / AlmaLinux
+### Amazon Linux 2 / Amazon Linux 2023
 
 ```bash
-sudo dnf install epel-release
-sudo dnf install certbot python3-certbot-nginx
+sudo yum install -y python3-certbot-nginx
 ```
-
-### Snap (universal, any Linux)
-
-```bash
-sudo snap install --classic certbot
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
-```
-
----
 
 ## Obtaining a Certificate
 
 ### Nginx (automatic config update)
 
 ```bash
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+sudo certbot --nginx -d pgdeepdive.pl -d www.pgdeepdive.pl
 ```
 
 ### Apache (automatic config update)

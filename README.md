@@ -43,3 +43,8 @@ export AWS_PROFILE=goodbean
 
 cd devops
 ./redeploy.sh            # reboots EC2; on boot it pulls the latest image automatically
+
+# Register SSL 
+
+sudo certbot --nginx -d pgdeepdive.pl -d www.pgdeepdive.pl
+
